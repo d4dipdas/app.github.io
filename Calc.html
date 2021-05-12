@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		input[type="submit"]{
+			width: 100%;
+			height: 45px;
+			background-color: aqua;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		input[type="text"]{
+			width: 97%;
+			font-size: 1.5rem;
+
+			height: 36px;
+		}
+		body{
+			background-color: tomato;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		function dis(x){
+			document.getElementById("data").value+=x;
+
+		}
+		function clr(){
+			document.getElementById("data").value="";
+		}
+		function del(){
+			var y=document.getElementById("data").value;
+			var z=y.substr(0,y.length-1);
+			document.getElementById("data").value=z;
+			
+		}
+		function result(){
+			var text=document.getElementById("data").value;
+			var total=eval(text);
+			document.getElementById("data").value=total;
+
+		}
+	</script>
+</head>
+<body>
+	<table border="2px" align="center">
+		<tr>
+			<td colspan="4"><input type="text" id="data"></td>
+			
+		</tr>
+		<tr>
+			<td><input type="submit" value="1" onclick="dis(1)"></td>
+			<td><input type="submit" value="2" onclick="dis(2)"></td>
+			<td><input type="submit" value="3" onclick="dis(3)"></td>
+			<td><input type="submit" value="4" onclick="dis(4)"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="5"  onclick="dis(5)"></td>
+			<td><input type="submit" value="6"  onclick="dis(6)"></td>
+			<td><input type="submit" value="7"  onclick="dis(7)"></td>
+			<td><input type="submit" value="8"  onclick="dis(8)"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="9"  onclick="dis(9)"></td>
+			<td><input type="submit" value="0"  onclick="dis(0)"></td>
+			<td><input type="submit" value="."  onclick="dis('.')"></td>
+			<td><input type="submit" value="%"  onclick="dis('%')"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="+"  onclick="dis('+')"></td>
+			<td><input type="submit" value="-"  onclick="dis('-')"></td>
+			<td><input type="submit" value="/"  onclick="dis('/')"></td>
+			<td><input type="submit" value="*"  onclick="dis('*')"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="^" onclick="data.value='Math.pow()'"></td>
+			<td><input type="submit" value="√" onclick="data.value='Math.sqrt()'"></td>
+			<td><input type="submit" value="Sin" onclick="data.value='Math.sin(*Math.PI/180)'"></td>
+			<td><input type="submit" value="cos" onclick="data.value='Math.cos()'"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="=" onclick="result()"></td>
+			<td><input type="submit" value="C" onclick="clr()"></td>
+			<td><input type="submit" value="D" onclick="del()"></td>
+			
+		</tr>
+	</table>
+	
+</body>
+</html>
